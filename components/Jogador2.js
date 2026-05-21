@@ -11,7 +11,7 @@ import {
  } from "react-native-web";
 
 // Componente principal APP
-export default function Jogador1(){
+export default function Jogador2(){
   // Cria uma estado (variavel php) chamado "pontos"
   // pontos = valor atual
   // setPontos = função para alterar o valor
@@ -36,10 +36,36 @@ export default function Jogador1(){
   return(
     // View principal do APP
     <View style={styles.container}>
+        <View style={styles.container1}>
+            <text style={styles.titulo1}>Jogador 1</text>
+       <text style={styles.pontos}>{pontos}</text>
+      {/* área dos botões +1 e -1 */}
+    <text style={styles.titulo1}>Jogador 1</text>
+       <text style={styles.pontos}>{pontos}</text>
+            <View style={styles.areaBotoes}>
+        <TouchableOpacity 
+          onPress={aumentar}
+          style={styles.botao}>
+            <Text style={styles.textoBotao}>+1</Text>
+        </TouchableOpacity>
+        <TouchableOpacity 
+          onPress={diminuir}
+          style={styles.botao}>
+            <Text style={styles.textoBotao}>-1</Text>
+        </TouchableOpacity>
+      </View>
+      {/* botão resetar */}
+      <TouchableOpacity 
+        onPress={resetar} 
+        style={styles.botaoReset}>
+            <Text style={styles.textoBotao}>Resetar</Text>
+        </TouchableOpacity>
+        </View>
       {/* Título do APP */}
       <Text style={styles.titulo}>
-        🎮 Contador Gamer
+        🎮 Contador Gamer 🖱
       </Text>
+      <text style={styles.titulo1}>Jogador 2</text>
       {/* Mostra o valor dos pontos */}
       <Text style={styles.pontos}>{pontos}</Text>
       {/* área dos botões +1 e -1 */}
@@ -63,22 +89,24 @@ export default function Jogador1(){
         </TouchableOpacity>
     </View>
   );
-}
+
+} 
 
 // ÁREA DE ESTILOS DO APP
-const styles = StyleSheet.create({
+const styles = StyleSheet.create ({
   // ESTILO DA TELA PRINCIPAL
   container: {
     // OCUPA A TELA TODA
     flex: 1,
     // COR DE FUNDO
-    backgroundColor: '#121212',
+    backgroundColor: '#8c7ae6ff',
     // CENTRALIZA HORIZONTALMENTE
     alignItems: 'center',
     // CENTRALIZA VERTICALMENTE
     justifyContent: 'center',
     // ESPAÇAMENTO INTERNO
     padding: 20,
+    flexDirection: 'row',
   },
 
   // ESTILO DO TÍTULO
@@ -116,7 +144,7 @@ const styles = StyleSheet.create({
   // ESTILO DOS BOTÕES +1 E -1
   botao: {
     // COR DO BOTÃO
-    backgroundColor: '#00ff88',
+    backgroundColor: '#ffffffff',
     // ESPAÇAMENTO VERTICAL
     paddingVertical: 15,
     // ESPAÇAMENTO HORIZONTAL

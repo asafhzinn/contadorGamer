@@ -11,7 +11,7 @@ import {
  } from "react-native-web";
 
 // Componente principal APP
-export default function Jogador1(){
+export default function Jogador4(){
   // Cria uma estado (variavel php) chamado "pontos"
   // pontos = valor atual
   // setPontos = função para alterar o valor
@@ -38,7 +38,7 @@ export default function Jogador1(){
     <View style={styles.container}>
       {/* Título do APP */}
       <Text style={styles.titulo}>
-        🎮 Contador Gamer
+        🎮 Contador Gamer 🐱‍👤
       </Text>
       {/* Mostra o valor dos pontos */}
       <Text style={styles.pontos}>{pontos}</Text>
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     // OCUPA A TELA TODA
     flex: 1,
     // COR DE FUNDO
-    backgroundColor: '#121212',
+    backgroundColor: '#85d2ff',
     // CENTRALIZA HORIZONTALMENTE
     alignItems: 'center',
     // CENTRALIZA VERTICALMENTE
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     // TAMANHO DA FONTE
     fontSize: 32,
     // COR DO TEXTO
-    color: '#00ff88',
+    color: '#efff0eff',
     // TEXTO EM NEGRITO
     fontWeight: 'bold',
     // ESPAÇO ABAIXO
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
   // ESTILO DOS BOTÕES +1 E -1
   botao: {
     // COR DO BOTÃO
-    backgroundColor: '#00ff88',
+    backgroundColor: '#000000ff',
     // ESPAÇAMENTO VERTICAL
     paddingVertical: 15,
     // ESPAÇAMENTO HORIZONTAL
@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
     // TAMANHO DA LETRA
     fontSize: 22,
     // COR DO TEXTO
-    color: '#000',
+    color: '#ecececff',
     // NEGRITO
     fontWeight: 'bold',
   },
